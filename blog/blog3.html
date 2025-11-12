@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Las rutas del aire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f6fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #004b8d;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #e4edf7;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #004b8d;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .content {
+      background-color: white;
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004b8d;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .steps {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    details {
+      background-color: #f2f6fa;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #004b8d;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    details:hover {
+      background-color: #dbe9f7;
+      transform: translateY(-2px);
+    }
+
+    summary {
+      font-weight: bold;
+      outline: none;
+    }
+
+    details[open] {
+      background-color: #e0f0ff;
+    }
+
+    details p {
+      margin: 10px 0 0 0;
+      font-weight: normal;
+      color: #444;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #004b8d;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #004b8d;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog de Aviación</h1>
+  </header>
+
+  <nav>
+    <a href="/blog/blog-personal.html">Inicio</a>
+    <a href="/blog/blog-personal.html">Articulos</a>
+    <a href="/blog/contacto.html">Contacto</a>
+  </nav>
+
+  <section class="content">
+    <h2>Las rutas del aire</h2>
+    <p>Las rutas aéreas son los caminos que siguen los aviones para llegar de un aeropuerto a otro, optimizando tiempo y combustible y asegurando la seguridad del tráfico aéreo.</p>
+
+    <img src="/blog/img/rutas.jpg" alt="Rutas aéreas">
+
+    <div class="steps">
+      <details>
+        <summary>1) ¿Qué son las rutas aéreas?</summary>
+        <p>Son caminos predefinidos en el cielo que conectan aeropuertos de manera segura, evitando colisiones y optimizando el tráfico aéreo global.</p>
+      </details>
+
+      <details>
+        <summary>2) Tipos de rutas</summary>
+        <p>Existen rutas nacionales, internacionales, de alta y baja altitud, dependiendo del tipo de vuelo y la región que cubren.</p>
+      </details>
+
+      <details>
+        <summary>3) Tecnología de navegación</summary>
+        <p>Los aviones usan sistemas GPS, radares y controladores de tráfico aéreo para seguir estas rutas con precisión y seguridad.</p>
+      </details>
+
+      <details>
+        <summary>4) Importancia</summary>
+        <p>Garantizan eficiencia en el consumo de combustible, seguridad de los vuelos y una mejor organización del espacio aéreo, especialmente en zonas con mucho tráfico.</p>
+      </details>
+    </div>
+
+    <a class="volver" href="/blog/blog-personal.html">← Volver al inicio</a>
+  </section>
+
+  <footer>
+    <p>Blog de Aviación</p>
+  </footer>
+</body>
+</html>

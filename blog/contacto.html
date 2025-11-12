@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f6fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #004b8d;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #e4edf7;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #004b8d;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .content {
+      background-color: white;
+      width: 90%;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004b8d;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #004b8d;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #004b8d;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: #004b8d;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #00396d;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #004b8d;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #004b8d;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 10px;
+      }
+      nav {
+        padding: 8px 0;
+      }
+      nav a {
+        display: inline-block;
+        margin: 5px 6px;
+        font-size: 15px;
+      }
+      .content {
+        width: 95%;
+        padding: 20px;
+      }
+      button {
+        font-size: 15px;
+        padding: 10px;
+      }
+      footer {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+
+    .toast {
+      visibility: hidden;
+      min-width: 320px;
+      background-color: #004b8d;
+      color: #fff;
+      text-align: center;
+      border-radius: 12px;
+      padding: 20px 40px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      z-index: 999;
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .toast.show {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .toast button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+    }
+
+    .toast button:hover {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog de Aviación</h1>
+  </header>
+
+  <nav>
+    <a href="/blog/blog-personal.html">Inicio</a>
+    <a href="#">Artículos</a>
+    <a href="/blog/contacto.html">Contacto</a>
+  </nav>
+
+  <section class="content">
+    <h2>Contacto</h2>
+    <p>¿Querés comunicarte conmigo? Completá el siguiente formulario y te responderé a la brevedad.</p>
+
+    <form id="contactoForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <a class="volver" href="/blog/blog-personal.html">← Volver al inicio</a>
+  </section>
+
+  <div id="toast" class="toast">
+    ¡Mensaje enviado con éxito, te responderé lo mas pronto posible!
+    <button id="cerrarToast">✖</button>
+  </div>
+
+  <footer>
+    <p>Blog de Aviación</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactoForm');
+    const toast = document.getElementById('toast');
+    const cerrarToast = document.getElementById('cerrarToast');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.reset();
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    });
+
+    cerrarToast.addEventListener('click', () => {
+      toast.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
+

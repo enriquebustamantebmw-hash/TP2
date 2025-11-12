@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido al blog de aviación</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f6fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #004b8d;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #e4edf7;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #004b8d;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s, text-decoration 0.3s;
+    }
+
+    nav a:hover {
+      color: #002b5e;
+      text-decoration: underline;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      background-color: #fff;
+      margin: 20px auto 50px;
+      width: 90%;
+      max-width: 1000px;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #003b73, #0074cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #004b8d;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 45px; 
+      width: 90%;
+      max-width: 1000px;
+      margin: 50px auto; 
+    }
+
+    article {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    article:hover {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+    }
+
+    article img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    article h3 {
+      color: #004b8d;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    article p {
+      font-size: 14px;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .leer-mas {
+      margin-top: 10px;
+      color: #004b8d;
+      font-weight: bold;
+      text-align: right;
+      transition: color 0.3s;
+    }
+
+    .leer-mas:hover {
+      color: #002b5e;
+      text-decoration: underline;
+    }
+
+    aside {
+      background-color: #fff;
+      width: 250px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #004b8d, #0073e6);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+    
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+      }
+
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        flex-direction: column;
+      }
+
+      article, aside {
+        width: 100%;
+      }
+
+      .hero h2 {
+        font-size: 26px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    .footer-nav {
+      margin: 10px 0;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: color 0.3s, text-decoration 0.3s;
+    }
+
+    .footer-nav a:hover {
+      color: #cce0ff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog de Aviación</h1>
+    <p>Historias, curiosidades y explicaciones sobre el mundo aéreo</p>
+  </header>
+
+  <nav>
+    <a href="/blog/blog-personal.html">Inicio</a>
+    <a href="#articulos">Artículos</a>
+    <a href="/blog/contacto.html">Contacto</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Bienvenidos al Blog</h2>
+    <p>Aprendé sobre aviación</p>
+    <img src="/blog/img/Airplane Flying GIF by Airbus.gif" alt="Boeing 787" height="550px" width="350px">
+  </section>
+
+  <section id="articulos" class="main">
+    <a href="/blog/blog1.html" class="card-link" target="_blank">
+      <article>
+        <img src="/blog/img/despegue.jpg" alt="artículo 1">
+        <h3>¿Cómo despega un avión?</h3>
+        <p>Descubrí el proceso de despegue y qué fuerzas entran en juego al levantar vuelo.</p>
+        <div class="leer-mas">Leer más ></div>
+      </article>
+    </a>
+
+    <a href="/blog/blog2.html" class="card-link" target="_blank">
+      <article>
+        <img src="/blog/img/aeropuertomasgrande.jpg" alt="artículo 2">
+        <h3>El aeropuerto más grande del mundo</h3>
+        <p>Conocé el aeropuerto que maneja más pasajeros y vuelos por día en todo el planeta.</p>
+        <div class="leer-mas">Leer más ></div>
+      </article>
+    </a>
+
+    <a href="/blog/blog3.html" class="card-link" target="_blank">
+      <article>
+        <img src="/blog/img/rutas.jpg" alt="artículo 3">
+        <h3>Las rutas del aire</h3>
+        <p>Te contamos cómo se trazan las rutas aéreas y qué tecnologías se usan para navegar.</p>
+        <div class="leer-mas">Leer más ></div>
+      </article>
+    </a>
+
+    <a href="/blog/blog4.html" class="card-link" target="_blank">
+      <article>
+        <img src="/blog/img/combustible.jpg" alt="artículo 4">
+        <h3>¿Cuánto cuesta el combustible en aviación?</h3>
+        <p>Te contamos cuánto puede costar el combustible especial usado por los jets en el mundo de la aviación.</p>
+        <div class="leer-mas">Leer más ></div>
+      </article>
+    </a>
+
+    <a href="/blog/blog5.html" class="card-link" target="_blank">
+      <article>
+        <img src="/blog/img/turbohelice.jpg" alt="artículo 5">
+        <h3>¿Cómo funciona un avión turbohélice?</h3>
+        <p>Te contamos cómo funciona un avión turbohélice, un tipo de aeronave muy usada en el mundo aeronáutico.</p>
+        <div class="leer-mas">Leer más ></div>
+      </article>
+    </a>
+
+    <a href="/blog/blog6.html" class="card-link" target="_blank">
+      <article>
+        <img src="/blog/img/jetprivado.jpg" alt="artículo 6">
+        <h3>¿Cuánto cuesta un jet privado?</h3>
+        <p>Te contamos cuánto cuesta comprar y mantener un jet privado, teniendo en cuenta todos los escenarios.</p>
+        <div class="leer-mas">Leer más ></div>
+      </article>
+    </a>
+  </section>
+
+  <div class="sidebar">
+    <aside>
+      <a href="/tp1/pagina2.html"><h3>Sobre mí</h3></a>
+      <p>Soy un apasionado de la aviación que comparte datos, historias y curiosidades del mundo aéreo.</p>
+    </aside>
+
+    <aside>
+      <a href="/blog/contacto.html"><h3>Contacto</h3></a>
+      <p>Contactame por cualquier duda o inquietud.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>Blog de Aviación</p>
+
+    <div class="footer-nav">
+      <a href="/blog/blog-personal.html">Inicio</a>
+      <a href="#articulos">Artículos</a>
+      <a href="/blog/contacto.html">Contacto</a>
+    </div>
+
+    <p style="font-size: 14px; opacity: 0.9;">Hecho por Enrique Bustamante</p>
+  </footer>
+</body>
+</html>

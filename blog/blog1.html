@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo despega un avión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f6fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #004b8d;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #e4edf7;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #004b8d;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .content {
+      background-color: white;
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004b8d;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .steps {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    details {
+      background-color: #f2f6fa;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #004b8d;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    details:hover {
+      background-color: #dbe9f7;
+      transform: translateY(-2px);
+    }
+
+    summary {
+      font-weight: bold;
+      outline: none; /* Quita el borde de enfoque por defecto */
+    }
+
+    details[open] {
+      background-color: #e0f0ff;
+    }
+
+    details p {
+      margin: 10px 0 0 0;
+      font-weight: normal;
+      color: #444;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #004b8d;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #004b8d;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog de Aviación</h1>
+  </header>
+
+  <nav>
+    <a href="/blog/blog-personal.html">Inicio</a>
+    <a href="/blog/blog-personal.html">Articulos</a>
+    <a href="/blog/contacto.html">Contacto</a>
+  </nav>
+
+  <section class="content">
+    <h2>¿Cómo despega un avión?</h2>
+    <p>Un avión despega gracias a la <strong>sustentación</strong> que generan sus alas cuando el aire pasa a gran velocidad por encima y por debajo de ellas.</p>
+
+    <img src="/blog/img/gifdespegue.gif" alt="Avión despegando">
+
+    <div class="steps">
+      <details>
+        <summary>1) Los motores empujan el avión hacia adelante</summary>
+        <p>Los motores a reacción (o hélices) expulsan aire hacia atrás a gran velocidad, creando una fuerza de empuje que impulsa el avión sobre la pista.</p>
+      </details>
+
+      <details>
+        <summary>2) Al ganar velocidad, el aire fluye más rápido sobre las alas</summary>
+        <p>La forma del ala hace que el aire de arriba se mueva más rápido que el de abajo, generando sustentación.</p>
+      </details>
+
+      <details>
+        <summary>3) Esa diferencia de presión genera la sustentación</summary>
+        <p>La sustentación es la fuerza que vence al peso del avión. A medida que la velocidad aumenta, también lo hace la sustentación hasta superar el peso total de la aeronave.</p>
+      </details>
+
+      <details>
+        <summary>4) El piloto tira del mando para levantar el morro y el avión se separa del suelo</summary>
+        <p>Cuando el avión alcanza la velocidad necesaria de despegue, el piloto eleva el morro, generando suficiente sustentación para que el avión se eleve.</p>
+      </details>
+    </div>
+
+    <p>En resumen: <em>los motores lo impulsan y las alas lo levantan.</em></p>
+
+    <a class="volver" href="/blog/blog-personal.html">← Volver al inicio</a>
+  </section>
+
+  <footer>
+    <p>Blog de Aviación</p>
+  </footer>
+</body>
+</html>
