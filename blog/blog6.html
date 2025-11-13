@@ -49,7 +49,7 @@
 
     p {
       font-size: 16px;
-      color: #555;
+      color: #ffffff;
       line-height: 1.6;
     }
 
@@ -110,6 +110,22 @@
       padding: 10px;
       margin-top: 30px;
     }
+    .footer-nav {
+      margin: 10px 0;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: color 0.3s, text-decoration 0.3s;
+    }
+
+    .footer-nav a:hover {
+      color: #cce0ff;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -154,8 +170,17 @@
     <a class="volver" href="../blog/blog-personal.html">← Volver al inicio</a>
   </section>
 
-  <footer>
+ <footer>
     <p>Blog de Aviación</p>
+
+    <div class="footer-nav">
+      <a href="../blog/blog-personal.html">Inicio</a>
+      <a href="#articulos">Artículos</a>
+      <a href="../blog/contacto.html">Contacto</a>
+      <a href="../index.html">Linktree</a>
+    </div>
+
+    <p style="font-size: 14px; opacity: 0.9;">Hecho por Enrique Bustamante</p>
   </footer>
 </body>
 </html>
